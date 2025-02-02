@@ -38,7 +38,7 @@ export const NavigationButton = ({
       variant={navigationActive ? "selectedSidebar" : "ghost"}
       size="sm"
       className={cn("justify-start gap-2 text-foreground/70", {
-        "text-primary-foreground": navigationActive,
+        "text-white": navigationActive,
       })}
       asChild
     >

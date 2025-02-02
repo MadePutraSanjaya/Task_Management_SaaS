@@ -25,10 +25,9 @@ const NavigationBar = ({ data, onClose }: NavigationBarProps) => {
           </Button>
         </div>
       </div>
-
       <div className="px-6 flex flex-col pb-4 gap-8 flex-1 mt-8">
         <div className="flex flex-col flex-1 gap-3">
-          {data.topNavigationEntries
+          {data.topNavigationEntries && data.topNavigationEntries
             .filter((nav) => nav.isVisible())
             .map((entry, index) => (
               <NavigationButton
@@ -37,11 +36,8 @@ const NavigationBar = ({ data, onClose }: NavigationBarProps) => {
                 onClose={onClose}
               />
             ))}
-
-          {/* some spacer */}
           <div className="flex-1" />
-
-          {data.bottomNavigationEntries
+          {data.bottomNavigationEntries && data.bottomNavigationEntries
             .filter((nav) => nav.isVisible())
             .map((entry, index) => (
               <NavigationButton

@@ -20,12 +20,12 @@ const AppBar = ({ isNavigationOpen, onOpenNavigation }: AppBarProps) => {
   const { setTheme } = useTheme();
 
   return (
-    <div className="flex items-center border-b-[1px] h-14 p-4">
+    <div className="flex items-center h-14 p-4 border-b-[1px]">
       <Button
+        onClick={() => onOpenNavigation()}
         size="icon"
         variant="ghost"
-        className={cn("lg:hidden", { block: !isNavigationOpen })}
-        onClick={() => onOpenNavigation()}
+        className={cn("lg:hidden", { block: !isNavigationOpen, hidden: isNavigationOpen })}
       >
         <IconMenu2 />
       </Button>

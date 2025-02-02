@@ -6,28 +6,28 @@ export interface RouteEntry {
 }
 
 export type NavigationLink = {
-  type: "link";
-  label: string;
-  isVisible: () => boolean;
-  icon: React.ReactNode;
-  href: string;
-  onClick: () => void;
+  type: "link"
+  label: string
+  isVisible: () => boolean
+  icon: React.ReactNode
+  href: string
+  onClick?: () => void
 };
 
 export type NavigationGroup = {
-  type: "group";
-  label: string;
-  isVisible: () => boolean;
-  icon: React.ReactNode;
-  href: string;
-  routes: NavigationEntry[];
+  type: "group"
+  label: string
+  isVisible: () => boolean
+  icon: React.ReactNode
+  href: string
+  routes: NavigationEntry[]
 };
 
 export type NavigationEntry = NavigationLink | NavigationGroup;
 
 export type NavigationBarData = {
-  topNavigationEntries: NavigationEntry[];
-  bottomNavigationEntries: NavigationEntry[];
+  topNavigationEntries?: NavigationEntry[];
+  bottomNavigationEntries?: NavigationEntry[];
   avatar?: NavigationAvatarProps;
   renderCompanyBrand?: () => React.ReactNode;
 };
