@@ -4,7 +4,7 @@ export const useGlobalRoutes = () => {
 
     const GLOBAL_ROUTES = {
         HOME: {
-            href: '/',
+            href: '/home',
             label: 'Home',
         },
         LOGIN: {

@@ -16,7 +16,6 @@ const isNavigationActive = (entry: NavigationEntry, path: string): boolean => {
   return path.startsWith(entry.href)
 }
 
-
 type NavigationButtonProps = {
   navigationEntry: NavigationEntry
   onClose?: () => void
@@ -38,7 +37,7 @@ export const NavigationButton = ({
       variant={navigationActive ? "selectedSidebar" : "ghost"}
       size="sm"
       className={cn("justify-start gap-2 text-foreground/70", {
-        "text-white": navigationActive,
+        "text-primary-foreground" : navigationActive,
       })}
       asChild
     >
